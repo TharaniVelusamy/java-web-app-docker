@@ -4,4 +4,4 @@ WORKDIR /opt
 RUN wget http://apachemirror.wuchna.com/tomcat/tomcat-9/v9.0.30/bin/apache-tomcat-9.0.30.zip && unzip apache-tomcat-9.0.30.zip && yum install java -y
 WORKDIR /opt/apache-tomcat-9.0.30/webapps
 EXPOSE 8080
-CMD["/opt/tomcat/bin/starup.sh","run"]
+CMD["/opt/tomcat/bin/catalina.sh","run"]
