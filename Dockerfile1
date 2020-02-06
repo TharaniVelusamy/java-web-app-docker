@@ -1,7 +1,7 @@
 FROM centos
 RUN yum install wget -y 
-WORKDIR /opt
+WORKDIR /opt/tomcat
 RUN wget http://apachemirror.wuchna.com/tomcat/tomcat-9/v9.0.30/bin/apache-tomcat-9.0.30.zip && unzip apache-tomcat-9.0.30.zip && yum install java -y
-WORKDIR /opt/apache-tomcat-9.0.30/webapps
+WORKDIR /opt/tomcat/apache-tomcat-9.0.30/webapps
 EXPOSE 8080
-CMD["/opt/tomcat/bin/catalina.sh","run"]
+CMD ["/opt/tomcat/bin/catalina.sh","run"]
